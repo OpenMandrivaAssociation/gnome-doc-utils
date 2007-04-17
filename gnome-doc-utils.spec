@@ -5,8 +5,8 @@
 %endif
 Summary: 		GNOME XML documentation utilities 
 Name: 			gnome-doc-utils
-Version: 		0.10.1
-Release: 		%mkrel 2
+Version: 		0.10.3
+Release: 		%mkrel 1
 Source0: 		http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 # (fc) 0.8.0-1mdv use catalog for dtd validation
 Patch0:			gnome-doc-utils-0.8.0-catalog.patch
@@ -87,5 +87,3 @@ rm -rf $RPM_BUILD_ROOT
 %_datadir/xml/gnome
 %_datadir/xml2po/
 %_mandir/man1/xml2po.1*
-
-
