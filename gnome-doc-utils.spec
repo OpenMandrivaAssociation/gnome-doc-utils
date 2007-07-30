@@ -17,6 +17,7 @@ BuildRequires: 		libxslt-devel
 BuildRequires: 		libxslt-proc
 BuildRequires: 		glib-gettextize
 BuildRequires: 		scrollkeeper
+BuildRequires:		docbook-dtd44-xml
 BuildRequires: 		intltool
 Requires:		libxslt-proc
 Requires:		libxml2-utils
