@@ -5,7 +5,7 @@
 %endif
 Summary: 		GNOME XML documentation utilities 
 Name: 			gnome-doc-utils
-Version: 		0.10.3
+Version: 		0.11.1
 Release: 		%mkrel 1
 Source0: 		http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 # (fc) 0.8.0-1mdv use catalog for dtd validation
@@ -40,9 +40,9 @@ cd tools
 %patch0 -p1 -b .catalog
 cd ..
 #needed by patch0
-aclocal-1.9 -I tools
+aclocal -I tools
 autoconf
-automake-1.9 -a -c
+automake -a -c
 
 %build
 
