@@ -5,8 +5,8 @@
 %endif
 Summary: 		GNOME XML documentation utilities 
 Name: 			gnome-doc-utils
-Version: 		0.11.1
-Release: 		%mkrel 2
+Version: 		0.11.2
+Release: 		%mkrel 1
 Source0: 		http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 # (fc) 0.8.0-1mdv use catalog for dtd validation
 Patch0:			gnome-doc-utils-0.8.0-catalog.patch
@@ -37,10 +37,10 @@ XSLT stylesheets that were once distributed with Yelp.
 
 %prep
 %setup -q
-touch *
 cd tools
 %patch0 -p1 -b .catalog
 cd ..
+intltoolize --force
 #needed by patch0
 aclocal -I tools
 autoconf
