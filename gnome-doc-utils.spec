@@ -25,7 +25,6 @@ Requires: 		python-libxml2
 Requires(post): 	scrollkeeper
 Requires(postun): 	scrollkeeper
 Requires:		docbook-dtd44-xml docbook-dtd412-xml
-BuildRoot: 		%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: 		noarch
 %define _requires_exceptions pkgconfig.libxml-2.0
 
