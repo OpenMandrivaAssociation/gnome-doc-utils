@@ -15,6 +15,7 @@ Group: 			Publishing
 Url: 			http://www.gnome.org
 BuildRequires: 		libxslt-devel
 BuildRequires: 		libxslt-proc
+BuildRequires: 		python-libxml2
 BuildRequires: 		glib-gettextize
 BuildRequires: 		scrollkeeper
 BuildRequires:		docbook-dtd44-xml
