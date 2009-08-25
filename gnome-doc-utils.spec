@@ -49,7 +49,8 @@ automake -a -c
 
 ./configure --prefix=%_prefix --mandir=%_mandir --disable-scrollkeeper
 
-%make
+#gw parallel make broken in 0.17.4
+make
 
 %check
 #broken ATM
