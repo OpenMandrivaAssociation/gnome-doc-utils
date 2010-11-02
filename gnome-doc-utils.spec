@@ -6,7 +6,7 @@
 Summary: 		GNOME XML documentation utilities 
 Name: 			gnome-doc-utils
 Version: 		0.20.2
-Release: 		%mkrel 4
+Release: 		%mkrel 5
 Source0: 		http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 # (fc) 0.8.0-1mdv use catalog for dtd validation (GNOME bug #497055)
 Patch0:			gnome-doc-utils-0.12.1-catalog.patch
@@ -16,7 +16,6 @@ Url: 			http://www.gnome.org
 BuildRequires: 		libxslt-devel
 BuildRequires: 		libxslt-proc
 BuildRequires: 		python-libxml2
-BuildRequires:		python-devel
 BuildRequires: 		glib-gettextize
 BuildRequires: 		scrollkeeper
 BuildRequires:		docbook-dtd44-xml
