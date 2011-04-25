@@ -5,7 +5,7 @@
 %endif
 Summary: 		GNOME XML documentation utilities 
 Name: 			gnome-doc-utils
-Version: 		0.20.5
+Version: 		0.20.6
 Release: 		%mkrel 1
 Source0: 		http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 # (fc) 0.8.0-1mdv use catalog for dtd validation (GNOME bug #497055)
