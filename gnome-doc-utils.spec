@@ -57,7 +57,7 @@ make
 make check
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std pkgconfigdir=%pkgconfigdir
 %find_lang gnome-doc-make --with-gnome
 %find_lang gnome-doc-mallard-spec --with-gnome
@@ -69,7 +69,7 @@ echo "%lang($(basename $omf|sed -e s/.*-// -e s/.omf//)) $(echo $omf|sed -e s!%b
 done
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %post
 %update_scrollkeeper
