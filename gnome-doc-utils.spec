@@ -80,6 +80,5 @@ rm -rf %{buildroot}
 %_datadir/gnome-doc-utils/
 %dir %_datadir/xml/
 %_datadir/xml/gnome
-%_datadir/xml/mallard
 %_mandir/man1/xml2po.1*
 %py_puresitedir/xml2po/
