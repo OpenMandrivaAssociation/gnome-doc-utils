@@ -53,13 +53,13 @@ make
 make check
 
 %install
-rm -rf %{buildroot}
+rm -rf %{buildroot} *.lang
 %makeinstall_std pkgconfigdir=%pkgconfigdir
 %find_lang gnome-doc-make --with-gnome
-%find_lang gnome-doc-mallard-spec --with-gnome
+#%find_lang gnome-doc-mallard-spec --with-gnome
 %find_lang gnome-doc-xslt --with-gnome
 %find_lang %name
-cat gnome-doc-xslt.lang gnome-doc-make.lang gnome-doc-mallard-spec.lang >> %name.lang
+cat gnome-doc-xslt.lang gnome-doc-make.lang >> %name.lang
 for omf in %buildroot%_datadir/omf/*/*[_-]??.omf;do 
 echo "%lang($(basename $omf|sed -e s/.*-// -e s/.omf//)) $(echo $omf|sed -e s!%buildroot!!)" >> %name.lang
 done
