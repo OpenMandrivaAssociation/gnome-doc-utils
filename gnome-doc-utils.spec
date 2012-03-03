@@ -60,9 +60,6 @@ rm -rf %{buildroot} *.lang
 %find_lang gnome-doc-xslt --with-gnome
 %find_lang %name
 cat gnome-doc-xslt.lang gnome-doc-make.lang >> %name.lang
-for omf in %buildroot%_datadir/omf/*/*[_-]??.omf;do 
-echo "%lang($(basename $omf|sed -e s/.*-// -e s/.omf//)) $(echo $omf|sed -e s!%buildroot!!)" >> %name.lang
-done
 
 %clean
 rm -rf %{buildroot}
@@ -81,10 +78,6 @@ rm -rf %{buildroot}
 %pkgconfigdir/*.pc
 %_datadir/aclocal/*.m4
 %_datadir/gnome-doc-utils/
-%dir %_datadir/omf/gnome-doc-make/
-%_datadir/omf/gnome-doc-make/gnome-doc-make-C.omf
-%dir %_datadir/omf/gnome-doc-xslt/
-%_datadir/omf/gnome-doc-xslt/gnome-doc-xslt-C.omf
 %dir %_datadir/xml/
 %_datadir/xml/gnome
 %_datadir/xml/mallard
