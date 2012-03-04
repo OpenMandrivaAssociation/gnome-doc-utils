@@ -64,13 +64,6 @@ cat gnome-doc-xslt.lang gnome-doc-make.lang >> %name.lang
 %clean
 rm -rf %{buildroot}
 
-%post
-%update_scrollkeeper
-
-%postun
-%clean_scrollkeeper
-
-
 %files -f %name.lang
 %defattr(-,root,root)
 %doc AUTHORS ChangeLog README
