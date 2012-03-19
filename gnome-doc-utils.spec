@@ -1,7 +1,7 @@
 %define pkgconfigdir %_datadir/pkgconfig
 Summary: 		GNOME XML documentation utilities 
 Name: 			gnome-doc-utils
-Version: 		0.20.7
+Version: 		0.20.8
 Release: 		%mkrel 1
 Source0: 		http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.xz
 # (fc) 0.8.0-1mdv use catalog for dtd validation (GNOME bug #497055)
