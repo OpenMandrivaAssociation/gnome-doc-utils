@@ -41,7 +41,7 @@ POT files.
 
 %package devel
 Summary:        A Collection of Documentation Utilities for GNOME
-Group:          System/GUI/GNOME
+Group:          Development/GNOME and GTK+ 
 Requires:       %{name} = %{version}
 Requires:       xml2po
 
