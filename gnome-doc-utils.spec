@@ -3,7 +3,7 @@
 Summary: 	GNOME XML documentation utilities 
 Name: 		gnome-doc-utils
 Version: 	0.20.10
-Release: 	3
+Release: 	4
 License: 	LGPLv2+ and GPLv2+
 Group: 		Publishing
 Url: 		http://www.gnome.org
@@ -20,9 +20,6 @@ BuildRequires:	xsltproc
 BuildRequires:	libxslt-devel
 
 Requires:	xsltproc
-Requires:	libxml2-utils
-Requires:	docbook-dtd44-xml
-Requires:	docbook-dtd412-xml
 
 %description
 gnome-doc-utils is a collection of documentation utilities for the Gnome
@@ -31,7 +28,7 @@ all auxiliary files in your source tree, and it contains the DocBook
 XSLT stylesheets that were once distributed with Yelp.
 
 %package -n xml2po
-Summary:        Tool to extract translatable content from XML documents
+Summary:	Tool to extract translatable content from XML documents
 Requires: 	python-libxml2
 
 %description -n xml2po
@@ -40,10 +37,13 @@ content from free-form XML documents and outputs gettext compatible
 POT files.
 
 %package devel
-Summary:        A Collection of Documentation Utilities for GNOME
-Group:          Development/GNOME and GTK+ 
-Requires:       %{name} = %{version}
-Requires:       xml2po
+Summary:	A Collection of Documentation Utilities for GNOME
+Group:		Development/GNOME and GTK+ 
+Requires:	%{name} = %{version}
+Requires:	docbook-dtd44-xml
+Requires:	docbook-dtd412-xml
+Requires:	libxml2-utils
+Requires:	xml2po
 
 %description devel
 This package contains the development files for %{name}.
