@@ -1,0 +1,14 @@
+diff -p -up gnome-doc-utils-0.12.1/tools/gnome-doc-utils.make.catalog gnome-doc-utils-0.12.1/tools/gnome-doc-utils.make
+--- gnome-doc-utils-0.12.1/tools/gnome-doc-utils.make.catalog	2008-01-09 22:42:26.000000000 +0100
++++ gnome-doc-utils-0.12.1/tools/gnome-doc-utils.make	2008-02-12 20:05:55.000000000 +0100
+@@ -471,8 +471,8 @@ check-doc-docs: $(_DOC_C_DOCS) $(_DOC_LC
+ 
+ check-doc-omf: $(_DOC_OMF_ALL)
+ 	@list='$(_DOC_OMF_ALL)'; for omf in $$list; do \
+-	  echo "xmllint --noout --xinclude --dtdvalid 'http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd' $$omf"; \
+-	  xmllint --noout --xinclude --dtdvalid 'http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd' $$omf; \
++	  echo "xmllint --noout --xinclude --dtdvalidfpi \"-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN\" $$omf"; \
++	  xmllint --noout --xinclude --dtdvalidfpi "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" $$omf; \
+ 	done
+ 
+ 
