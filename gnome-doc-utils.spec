@@ -3,7 +3,7 @@
 Summary:	GNOME XML documentation utilities 
 Name:		gnome-doc-utils
 Version:	0.20.10
-Release:	11
+Release:	12
 License:	LGPLv2+ and GPLv2+
 Group:		Publishing
 Url:		http://www.gnome.org
@@ -15,7 +15,7 @@ BuildArch:	noarch
 BuildRequires:	docbook-dtd44-xml
 BuildRequires:	glib-gettextize
 BuildRequires:	intltool
-BuildRequires:	python-libxml2
+BuildRequires:	python2-libxml2
 BuildRequires:	xsltproc
 BuildRequires:	pkgconfig(libxslt)
 
@@ -29,7 +29,7 @@ XSLT stylesheets that were once distributed with Yelp.
 
 %package -n xml2po
 Summary:	Tool to extract translatable content from XML documents
-Requires:	python-libxml2
+Requires:	python2-libxml2
 
 %description -n xml2po
 xml2po is a simple Python program which extracts translatable
@@ -59,6 +59,7 @@ autoconf
 automake -a -c
 
 %build
+export PYTHON=%{__python2}
 %configure2_5x \
 	--build=%{_build} \
 	--disable-scrollkeeper \
@@ -89,7 +90,7 @@ cat gnome-doc-xslt.lang gnome-doc-make.lang >> %{name}.lang
 %files -n xml2po
 %doc xml2po/AUTHORS xml2po/ChangeLog xml2po/COPYING xml2po/NEWS xml2po/README
 %{_bindir}/xml2po
-%{py_puresitedir}/xml2po/
+%{py2_puresitedir}/xml2po/
 %{_mandir}/man1/xml2po.1*
 
 %files devel
