@@ -3,7 +3,7 @@
 Summary:	GNOME XML documentation utilities 
 Name:		gnome-doc-utils
 Version:	0.20.10
-Release:	15
+Release:	16
 License:	LGPLv2+ and GPLv2+
 Group:		Publishing
 Url:		http://www.gnome.org
@@ -52,6 +52,7 @@ This package contains the development files for %{name}.
 %setup -q
 %apply_patches
 
+rm -f m4/glib-gettext.m4
 intltoolize --force
 #needed by patch0
 aclocal -I tools -I m4
