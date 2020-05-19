@@ -15,7 +15,7 @@ BuildArch:	noarch
 BuildRequires:	docbook-dtd44-xml
 BuildRequires:	glib-gettextize
 BuildRequires:	intltool
-BuildRequires:	python2-libxml2
+#BuildRequires:	python2-libxml2
 BuildRequires:	xsltproc
 BuildRequires:	pkgconfig(libxslt)
 
