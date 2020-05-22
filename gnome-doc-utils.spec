@@ -15,7 +15,7 @@ BuildArch:	noarch
 BuildRequires:	docbook-dtd44-xml
 BuildRequires:	glib-gettextize
 BuildRequires:	intltool
-BuildRequires:	python2-libxml2
+BuildRequires:	python-libxml2
 BuildRequires:	xsltproc
 BuildRequires:	pkgconfig(libxslt)
 
@@ -60,19 +60,20 @@ autoconf
 automake -a -c
 
 %build
-export PYTHON=%{__python2}
-%configure2_5x \
+export PYTHON=%{__python3}
+%configure \
 	--build=%{_build} \
 	--disable-scrollkeeper \
 	--enable-documentation
 
-%make
+%make_build
+sed -i s/python$/python3/g xml2po/xml2po/xml2po
 
 %check
 %make check
 
 %install
-%makeinstall_std pkgconfigdir=%{pkgconfigdir}
+%make_install pkgconfigdir=%{pkgconfigdir}
 %find_lang gnome-doc-make --with-gnome
 %find_lang gnome-doc-xslt --with-gnome
 %find_lang %{name}
