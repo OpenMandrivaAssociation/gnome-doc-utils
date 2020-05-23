@@ -10,6 +10,7 @@ Url:		http://www.gnome.org
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
 # (fc) 0.8.0-1mdv use catalog for dtd validation (GNOME bug #497055)
 Patch0:		gnome-doc-utils-0.12.1-catalog.patch
+Patch1:		gnome-doc-utils-0.20.10-python3.patch
 BuildArch:	noarch
 
 BuildRequires:	docbook-dtd44-xml
@@ -78,6 +79,7 @@ sed -i s/python$/python3/g xml2po/xml2po/xml2po
 %find_lang gnome-doc-xslt --with-gnome
 %find_lang %{name}
 cat gnome-doc-xslt.lang gnome-doc-make.lang >> %{name}.lang
+sed -i -e '/^Requires:/d' %{buildroot}%{_datadir}/pkgconfig/xml2po.pc
 
 %files -f %{name}.lang
 %doc AUTHORS ChangeLog README
@@ -92,7 +94,7 @@ cat gnome-doc-xslt.lang gnome-doc-make.lang >> %{name}.lang
 %files -n xml2po
 %doc xml2po/AUTHORS xml2po/ChangeLog xml2po/COPYING xml2po/NEWS xml2po/README
 %{_bindir}/xml2po
-%{py2_puresitedir}/xml2po/
+%{py_puresitedir}/xml2po/
 %{_mandir}/man1/xml2po.1*
 
 %files devel
