@@ -29,7 +29,7 @@ XSLT stylesheets that were once distributed with Yelp.
 
 %package -n xml2po
 Summary:	Tool to extract translatable content from XML documents
-Requires:	python2-libxml2
+Requires:	python-libxml2
 
 %description -n xml2po
 xml2po is a simple Python program which extracts translatable
