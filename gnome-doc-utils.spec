@@ -6,7 +6,7 @@ Version:	0.20.10
 Release:	24
 License:	LGPLv2+ and GPLv2+
 Group:		Publishing
-Url:		http://www.gnome.org
+Url:		https://www.gnome.org
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
 # (fc) 0.8.0-1mdv use catalog for dtd validation (GNOME bug #497055)
 Patch0:		gnome-doc-utils-0.12.1-catalog.patch
