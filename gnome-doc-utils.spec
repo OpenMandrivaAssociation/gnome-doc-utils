@@ -3,7 +3,7 @@
 Summary:	GNOME XML documentation utilities 
 Name:		gnome-doc-utils
 Version:	0.20.10
-Release:	24
+Release:	25
 License:	LGPLv2+ and GPLv2+
 Group:		Publishing
 Url:		https://www.gnome.org
