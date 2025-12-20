@@ -13,6 +13,9 @@ Patch0:		gnome-doc-utils-0.12.1-catalog.patch
 Patch1:		gnome-doc-utils-0.20.10-python3.patch
 BuildArch:	noarch
 
+BuildRequires:	make
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRequires:	docbook-dtd44-xml
 BuildRequires:	glib-gettextize
 BuildRequires:	intltool
